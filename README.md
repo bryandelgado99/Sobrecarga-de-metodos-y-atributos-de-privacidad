@@ -1,4 +1,4 @@
-﻿# <center>Sobrecarga de métodos y atributos de privacidad</center>
+# <center>Sobrecarga de métodos y atributos de privacidad</center>
 
 <center><h5> Taller Grupal </h5></center>
 
