@@ -14,6 +14,8 @@ public class figuras3D {
         this.radio_base_cono = radio_base_cono;
         this.altura_cono = altura_cono;
     }
+	
+	
     //Metodos-------------------------------------------------------------
     //Bryan Delgado
     private float getA() {
@@ -27,6 +29,20 @@ public class figuras3D {
     private void setRadio_base_cono(float radio_base_cono) {this.radio_base_cono = radio_base_cono;}
     private float getAltura_cono() {return altura_cono;}
     private void setAltura_cono(float altura_cono) {this.altura_cono = altura_cono;}
+//**************************************************************************************************//
+	//Erick Villarroel//
+public class piramide {
+	private double altura;
+	private double base;
+	private double apotema;
+public piramide(double altura, double base, double apotema){
+	this.altura = altura;this.base = base;this.apotema = apotema;}
+public double calcularArea() {
+	double areaBase = base * base;
+	double areaLateral = (base * apotema) / 2;return areaBase + areaLateral;}
+public double calcularPerimetro() {
+	double perimetroBase = base * 4;return perimetroBase;}}
+//**************************************************************************************************//
     //Metodos especiales----------------------------------------------------------------------------
     //Bryan Delgado *****************************************************
     private float area_Icosaedro(){
