@@ -16,14 +16,14 @@
  - JIMENEZ  PILLACELA MARTIN SEBASTIAN 
  - NOVILLO INSUASTY JOSUE ISMAEL 
  - REVELO ROMERO INGRITH DEJANEIRA 
- - TINOCO TOMALA HEYER ORLANDO VILLARROEL
- - SANCHEZ ERICK ALEXANDER
+ - TINOCO TOMALA HEYER ORLANDO 
+ - VILLARROEL SANCHEZ ERICK ALEXANDER
 
 ## Instrucciones
 1.- Repositorio de github, en el readme  **deben**  constar los integrantes.
 
 2.- En el repositorio de github debe estar un pdf con capturas de la ejecución del sistema.
 
-3.  **Todos**  deben subir este entregable.
+3.- **Todos**  deben subir este entregable.
 
 
