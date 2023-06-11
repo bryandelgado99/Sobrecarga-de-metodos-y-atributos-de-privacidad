@@ -23,11 +23,11 @@ public class figuras3D {
 
     //Metodos especiales----------------------------------------------------------------------------
     //Bryan Delgado *****************************************************
-    private float area_Icosaedro(float a){
+    private float area_Icosaedro(){
         return (float) (5*Math.sqrt(3)*Math.pow(a, 2));
     }
 
-    private float volumen_Icosaedro(float a){
+    private float volumen_Icosaedro(){
         double op = (((15*Math.pow(a, 3)) + (Math.sqrt(5)*Math.pow(a, 3)))/12);
         return (float) op;
     }
