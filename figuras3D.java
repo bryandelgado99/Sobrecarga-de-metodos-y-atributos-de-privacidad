@@ -4,6 +4,10 @@ public class figuras3D {
     private double pi=3.1416; //Variable Pi necesario para calculos
     private float radio_base_cono; //Atributo necesario para el cono
     private float altura_cono; // Atributo necesario para el cono
+    private double base_prisma; //Atributo necesario para el prisma
+    private double altura_prisma; //Atributo necesario para el prisma
+    private double profundidad_prisma; //Atributo necesario para el prisma
+
     //Constructores-------------------------------------------------------
     //Bryan Delgado ---- Constructor de Icosaedro
     public figuras3D(float a) {
@@ -14,8 +18,14 @@ public class figuras3D {
         this.radio_base_cono = radio_base_cono;
         this.altura_cono = altura_cono;
     }
-	
-	
+    //Martin Jimenez --- Constructores prisma
+    // Constructor con argumentos
+    public figuras3D(double base_prisma, double altura_prisma, double profundidad_prisma) {
+        this.base_prisma = base_prisma;
+        this.altura_prisma = altura_prisma;
+        this.profundidad_prisma = profundidad_prisma;
+    }
+
     //Metodos-------------------------------------------------------------
     //Bryan Delgado
     private float getA() {
@@ -29,20 +39,6 @@ public class figuras3D {
     private void setRadio_base_cono(float radio_base_cono) {this.radio_base_cono = radio_base_cono;}
     private float getAltura_cono() {return altura_cono;}
     private void setAltura_cono(float altura_cono) {this.altura_cono = altura_cono;}
-//**************************************************************************************************//
-	//Erick Villarroel//
-public class piramide {
-	private double altura;
-	private double base;
-	private double apotema;
-public piramide(double altura, double base, double apotema){
-	this.altura = altura;this.base = base;this.apotema = apotema;}
-public double calcularArea() {
-	double areaBase = base * base;
-	double areaLateral = (base * apotema) / 2;return areaBase + areaLateral;}
-public double calcularPerimetro() {
-	double perimetroBase = base * 4;return perimetroBase;}}
-//**************************************************************************************************//
     //Metodos especiales----------------------------------------------------------------------------
     //Bryan Delgado *****************************************************
     private float area_Icosaedro(){
@@ -78,5 +74,53 @@ public double calcularPerimetro() {
         System.out.println("\nEl área total de un cono es: " +area_total_cono());
         System.out.println("El volumen del cono es: "+volumen_cono());
     }
-    //********************************************************************
+    //Martin Jimenez********************************************************************
+    public void setBase(double base_prisma) {
+        this.base_prisma = base_prisma;
+    }
+
+    public double getBase() {
+        return base_prisma;
+    }
+
+    // Setter y Getter para la altura del prisma
+    //Martin Jimenez
+    public void setAltura(double altura_prisma) {
+        this.altura_prisma = altura_prisma;
+    }
+
+    public double getAltura() {
+        return altura_prisma;
+    }
+
+    // Setter y Getter para la profundidad del prisma
+    //Martin Jimenez
+    public void setProfundidad(double profundidad_prisma) {
+        this.profundidad_prisma = profundidad_prisma;
+    }
+
+    public double getProfundidad() {
+        return profundidad_prisma;
+    }
+
+    // Método para calcular el área de la base
+    public double calcularAreaBase() {
+        return base_prisma * base_prisma;
+    }
+
+    // Método para calcular el área lateral
+    public double calcularAreaLateral() {
+        return 2 * base_prisma * altura_prisma + 2 * base_prisma * profundidad_prisma;
+    }
+
+    // Método para calcular el área total
+    public double calcularAreaTotal() {
+        return calcularAreaBase() + calcularAreaLateral();
+    }
+
+    // Método para calcular el volumen
+    public double calcularVolumen() {
+        return base_prisma * altura_prisma * profundidad_prisma;
+    }
+
 }

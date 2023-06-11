@@ -8,6 +8,7 @@ public class main {
         //Instancias
         figuras3D icosaedro = new figuras3D(6.7f);
         figuras3D cono = new figuras3D(25.5f, 10.7f);
+        figuras3D prisma1 = new figuras3D(9,10,11);
 
         //Menu principal
         System.out.println("------------- Bienvenido a 3DForms --------------");
@@ -15,7 +16,7 @@ public class main {
 
         System.out.println("\n-----> 1. Piramide");
         System.out.println("-----> 2. Esfera");
-        System.out.println("-----> 3. Prima");
+        System.out.println("-----> 3. Prisma");
         System.out.println("-----> 4. Cilindro");
         System.out.println("-----> 5. Cubo");
         System.out.println("-----> 6. Cono");
@@ -48,6 +49,18 @@ public class main {
                 break;
 
             case 3:
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("\n------> Ha seleccionado el Prisma");
+                System.out.print("Ingrese el valor de la base: ");
+                double base_prisma = scanner.nextDouble();
+                System.out.print("Ingrese el valor de la altura: ");
+                double altura_prisma = scanner.nextDouble();
+                System.out.print("Ingrese el valor de la profundidad: ");
+                double profundidad_prisma = scanner.nextDouble();
+                System.out.println("Área de la base: " + prisma1.calcularAreaBase());
+                System.out.println("Área lateral: " + prisma1.calcularAreaLateral());
+                System.out.println("Área total: " + prisma1.calcularAreaTotal());
+                System.out.println("Volumen: " + prisma1.calcularVolumen());
                 break;
 
             case 4:
