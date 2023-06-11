@@ -29,7 +29,17 @@ public class main {
          * En el menu del switch , agregar los llamados a los metodos de cada figura que realicen.*/
 
         switch (option) {
-            case 1:
+            case 1:System.out.println("Ingrese la altura de la pirámide:");
+            double altura = scanner.nextDouble();
+            System.out.println("Ingrese la longitud de la base de la pirámide:");
+            double base = scanner.nextDouble();
+            System.out.println("Ingrese la longitud del apotema de la pirámide:");
+            double apotema = scanner.nextDouble();
+            piramide piramide = new piramide(altura, base, apotema);
+            double area = piramide.calcularArea();
+            double perimetro = piramide.calcularPerimetro();
+            System.out.println("El área de la pirámide es: " + area);
+            System.out.println("El perímetro de la base de la pirámide es: " + perimetro);
                 break;
 
             case 2:
