@@ -7,6 +7,7 @@ public class main {
 
         //Instancias
         figuras3D icosaedro = new figuras3D(6.7f);
+        figuras3D cono = new figuras3D(25.5f, 10.7f);
 
         //Menu principal
         System.out.println("------------- Bienvenido a 3DForms --------------");
@@ -43,7 +44,15 @@ public class main {
             case 5:
                 break;
 
-            case 6:
+            case 6: //Cono
+                System.out.println("\n------> Ha seleccionado el Cono");
+
+                System.out.println("\nPor favor, ingrese el valor del radio de la base del cono: ");
+                //float data = entrada.nextFloat();
+                System.out.println("\nPor favor, ingrese el valor de la altura del cono: ");
+                //float data = entrada.nextFloat();
+
+                //Aqui usamos los setters para darle los valores en caso de entrada, pero ya determinamos en los constructorres arriba por las instancias
                 break;
 
             case 7: //Icosaedro
