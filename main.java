@@ -29,7 +29,9 @@ public class main {
          * En el menu del switch , agregar los llamados a los metodos de cada figura que realicen.*/
 
         switch (option) {
-            case 1:System.out.println("Ingrese la altura de la pirámide:");
+            case 1:
+            System.out.println("Usted ha seleccionado la Piramide ");
+            System.out.println("Ingrese la altura de la pirámide:");
             double altura = scanner.nextDouble();
             System.out.println("Ingrese la longitud de la base de la pirámide:");
             double base = scanner.nextDouble();
