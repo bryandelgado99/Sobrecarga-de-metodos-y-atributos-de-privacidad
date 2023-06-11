@@ -1,7 +1,7 @@
 public class figuras3D {
 
     //Atributos-----------------------------------------------------------
-   float a;
+    float a;
 
     //Constructores-------------------------------------------------------
     //Bryan Delgado ---- Constructor de Icosaedro
@@ -23,14 +23,12 @@ public class figuras3D {
 
     //Metodos especiales----------------------------------------------------------------------------
     //Bryan Delgado *****************************************************
-    private float area_Icosaedro(){
+    private float area_Icosaedro(float a){
         return (float) (5*Math.sqrt(3)*Math.pow(a, 2));
     }
 
-    private float volumen_Icosaedro(){
-
+    private float volumen_Icosaedro(float a){
         double op = (((15*Math.pow(a, 3)) + (Math.sqrt(5)*Math.pow(a, 3)))/12);
-
         return (float) op;
     }
 
