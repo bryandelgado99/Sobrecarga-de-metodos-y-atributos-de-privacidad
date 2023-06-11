@@ -53,6 +53,8 @@ public class main {
                 //float data = entrada.nextFloat();
 
                 //Aqui usamos los setters para darle los valores en caso de entrada, pero ya determinamos en los constructorres arriba por las instancias
+
+                cono.imprimir_datos_cono();
                 break;
 
             case 7: //Icosaedro
