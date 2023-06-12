@@ -8,7 +8,7 @@ public class main {
         //Instancias
         figuras3D icosaedro = new figuras3D(6.7f);
         figuras3D cono = new figuras3D(25.5f, 10.7f);
-        figuras3D prisma1 = new figuras3D(9,10,11);
+        figuras3D prisma1 = new figuras3D(9.10f,11f);
         figuras3D cubo = new figuras3D(5.3f);
 
         //Menu principal
@@ -32,18 +32,18 @@ public class main {
 
         switch (option) {
             case 1:
-            System.out.println("Usted ha seleccionado la Piramide ");
-            System.out.println("Ingrese la altura de la pirámide:");
-            double altura = scanner.nextDouble();
-            System.out.println("Ingrese la longitud de la base de la pirámide:");
-            double base = scanner.nextDouble();
-            System.out.println("Ingrese la longitud del apotema de la pirámide:");
-            double apotema = scanner.nextDouble();
-            piramide piramide = new piramide(altura, base, apotema);
-            double area = piramide.calcularArea();
-            double perimetro = piramide.calcularPerimetro();
-            System.out.println("El área de la pirámide es: " + area);
-            System.out.println("El perímetro de la base de la pirámide es: " + perimetro);
+                System.out.println("-----> Ha seleccionado la Piramide ");
+                System.out.println("\nIngrese la altura de la pirámide:");
+                double altura = entrada.nextDouble();
+                System.out.println("\nIngrese la longitud de la base de la pirámide:");
+                double base = entrada.nextDouble();
+                System.out.println("\nIngrese la longitud del apotema de la pirámide:");
+                double apotema = entrada.nextDouble();
+                figuras3D piramide = new figuras3D(altura, base, apotema);
+                double area = piramide.calcularArea();
+                double perimetro = piramide.calcularPerimetro();
+                System.out.println("\nEl área de la pirámide es: " + area);
+                System.out.println("El perímetro de la base de la pirámide es: " + perimetro);
                 break;
 
             case 2:
