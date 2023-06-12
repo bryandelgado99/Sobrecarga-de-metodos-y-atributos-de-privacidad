@@ -1,6 +1,6 @@
 public class figuras3D {
     //Atributos-----------------------------------------------------------
-    float a;
+    private float a;
     private double pi=3.1416; //Variable Pi necesario para calculos
     private float radio_base_cono; //Atributo necesario para el cono
     private float altura_cono; // Atributo necesario para el cono
@@ -10,6 +10,11 @@ public class figuras3D {
     private float altura_piramide; //Atributos para piramide
     private float base_piramide;
     private float apotema_piramide;
+
+    //Atributos para el cilidro
+    private int altura_cilindro;
+    private int base_cilindro;
+    private int radio_cilindro;
 
     //Constructores-------------------------------------------------------
     //Bryan Delgado ---- Constructor de Icosaedro
@@ -36,6 +41,13 @@ public class figuras3D {
         this.apotema_piramide = apotema_piramide;
     }
 
+    //Melany Barrera------------------------------------------------------
+    public figuras3D(int altura_cilindro, int base_cilindro, int radio_cilindro) {
+        this.altura_cilindro = altura_cilindro;
+        this.base_cilindro = base_cilindro;
+        this.radio_cilindro = radio_cilindro;
+    }
+
     //Metodos-------------------------------------------------------------
     //Bryan Delgado
     private float getA() {
@@ -49,7 +61,9 @@ public class figuras3D {
     private void setRadio_base_cono(float radio_base_cono) {this.radio_base_cono = radio_base_cono;}
     private float getAltura_cono() {return altura_cono;}
     private void setAltura_cono(float altura_cono) {this.altura_cono = altura_cono;}
+
     //Metodos especiales----------------------------------------------------------------------------
+
     //Bryan Delgado *****************************************************
     private float area_Icosaedro(){
         return (float) (5*Math.sqrt(3)*Math.pow(a, 2));
@@ -62,6 +76,7 @@ public class figuras3D {
         System.out.println("\nEl area del Icosaedro es: "+area_Icosaedro());
         System.out.println("El volumen del Icosaedro es: "+volumen_Icosaedro());
     }
+
     //Heyer Tinoco*******************************************************
     private float area_base_cono(){ //Calculo necesario para calcular el area del cono
         double aux = getRadio_base_cono()*getRadio_base_cono();
@@ -165,8 +180,7 @@ public class figuras3D {
     }
 
     public double calcularPerimetro() {
-        double perimetroBase = base_piramide * 4;
-        return perimetroBase;
+        return base_piramide * 4;
     }
 
     //---------------------------------------------------------------
@@ -185,4 +199,50 @@ public class figuras3D {
     public float volumencubo (float l){
         return (l)*(l)*(l);
     }
+
+    //Melany Barrera----------------------------------------------------
+    public int getAltura_cilindro() {
+        return altura_cilindro;
+    }
+
+    public void setAltura_cilindro(int altura_cilindro) {
+        this.altura_cilindro = altura_cilindro;
+    }
+
+    public int getBase_cilindro() {
+        return base_cilindro;
+    }
+
+    public void setBase_cilindro(int base_cilindro) {
+        this.base_cilindro = base_cilindro;
+    }
+
+    public int getRadio_cilindro() {
+        return radio_cilindro;
+    }
+
+    public void setRadio_cilindro(int radio_cilindro) {
+        this.radio_cilindro = radio_cilindro;
+    }
+
+    //Metodos para calcular areas y volumen del cilidro
+
+    private float arealateral(){
+        return (float) (2*Math.PI*radio_cilindro*altura_cilindro);
+    }
+    private float areatotal_cilindro(){
+        return (float) (2*Math.PI*radio_cilindro*(altura_cilindro+radio_cilindro));
+    }
+
+    private float volumen_cilndro(){
+        return (float) (Math.PI*Math.pow(radio_cilindro, 2.*altura_cilindro));
+    }
+
+    public void imprimirDatos_cilindro(){
+        System.out.println("\nEl área lateral del cilindro es: " + arealateral());
+        System.out.println("El área total del cilindro es: " + areatotal_cilindro());
+        System.out.println("El volumen del cilindro es: " + volumen_cilndro());
+    }
+
+    //------------------------------------------------------------------
 }
