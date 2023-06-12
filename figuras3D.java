@@ -7,6 +7,9 @@ public class figuras3D {
     private double base_prisma; //Atributo necesario para el prisma
     private double altura_prisma; //Atributo necesario para el prisma
     private double profundidad_prisma; //Atributo necesario para el prisma
+    private float altura_piramide; //Atributos para piramide
+    private float base_piramide;
+    private float apotema_piramide;
 
     //Constructores-------------------------------------------------------
     //Bryan Delgado ---- Constructor de Icosaedro
@@ -26,7 +29,12 @@ public class figuras3D {
         this.profundidad_prisma = profundidad_prisma;
     }
 
-
+    //Erick Villarroel
+    public figuras3D(float altura_piramide, float apotema_piramide, float base_piramide) {
+        this.altura_piramide = altura_piramide;
+        this.base_piramide = base_piramide;
+        this.apotema_piramide = apotema_piramide;
+    }
 
     //Metodos-------------------------------------------------------------
     //Bryan Delgado
@@ -124,15 +132,51 @@ public class figuras3D {
     public double calcularVolumen() {
         return base_prisma * altura_prisma * profundidad_prisma;
     }
+
+    //Erick Villarroel-----------------------------------------------
+    public float getAltura_piramide() {
+        return altura_piramide;
+    }
+
+    public void setAltura_piramide(float altura_piramide) {
+        this.altura_piramide = altura_piramide;
+    }
+
+    public float getBase_piramide() {
+        return base_piramide;
+    }
+
+    public void setBase_piramide(float base_piramide) {
+        this.base_piramide = base_piramide;
+    }
+
+    public float getApotema_piramide() {
+        return apotema_piramide;
+    }
+
+    public void setApotema_piramide(float apotema_piramide) {
+        this.apotema_piramide = apotema_piramide;
+    }
+
+    public double calcularArea() {
+        double areaBase = base_piramide * base_piramide;
+        double areaLateral = (base_piramide * apotema_piramide) / 2;
+        return areaBase + areaLateral;
+    }
+
+    public double calcularPerimetro() {
+        double perimetroBase = base_piramide * 4;
+        return perimetroBase;
+    }
+
+    //---------------------------------------------------------------
+
 //cubo
     private float l;//longitud de un lado del cubo
     private float getL() {
         return l;
     }
     private void setL(float l) {
-        this.l = l;
-    }
-    public figuras3D (float l) {
         this.l = l;
     }
     public float areacubo (float l){
