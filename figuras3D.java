@@ -26,6 +26,8 @@ public class figuras3D {
         this.profundidad_prisma = profundidad_prisma;
     }
 
+
+
     //Metodos-------------------------------------------------------------
     //Bryan Delgado
     private float getA() {
@@ -122,5 +124,21 @@ public class figuras3D {
     public double calcularVolumen() {
         return base_prisma * altura_prisma * profundidad_prisma;
     }
-
+//cubo
+    private float l;//longitud de un lado del cubo
+    private float getL() {
+        return l;
+    }
+    private void setL(float l) {
+        this.l = l;
+    }
+    public figuras3D (float l) {
+        this.l = l;
+    }
+    public float areacubo (float l){
+        return 6*(l)*(l);
+    }
+    public float volumencubo (float l){
+        return (l)*(l)*(l);
+    }
 }

@@ -9,6 +9,7 @@ public class main {
         figuras3D icosaedro = new figuras3D(6.7f);
         figuras3D cono = new figuras3D(25.5f, 10.7f);
         figuras3D prisma1 = new figuras3D(9,10,11);
+        figuras3D cubo = new figuras3D(5.3f);
 
         //Menu principal
         System.out.println("------------- Bienvenido a 3DForms --------------");
@@ -67,6 +68,13 @@ public class main {
                 break;
 
             case 5:
+                Scanner scannner = new Scanner(System.in);
+                System.out.println("Usted ha seleccionado CUBO ");
+                System.out.print("Ingrese el valor del lado del cubo: ");
+                float lado = scannner.nextFloat();
+                System.out.println("Volumen: " + cubo.volumencubo(lado));
+                System.out.println("Areas: " + cubo.areacubo(lado));
+
                 break;
 
             case 6: //Cono
