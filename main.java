@@ -9,7 +9,8 @@ public class main {
         figuras3D icosaedro = new figuras3D(6.7f);
         figuras3D cono = new figuras3D(25.5f, 10.7f);
         figuras3D prisma1 = new figuras3D(9.10f,11f);
-        figuras3D cubo = new figuras3D(5.3f);
+        figuras3D cubo = new figuras3D(5.27f);
+        figuras3D cilindro = new figuras3D(12,8,9);
 
         //Menu principal
         System.out.println("------------- Bienvenido a 3DForms --------------");
@@ -65,6 +66,18 @@ public class main {
                 break;
 
             case 4:
+                System.out.println("\n------> Ha seleccionado el Cilindro");
+
+                System.out.println("\nPor favor, ingrese valor de la base del cilindro: ");
+                int base_cilidro = entrada.nextInt();
+
+                System.out.println("\nPor favor, ingrese de la altura del cilindro: ");
+                int altura_cillindro = entrada.nextInt();
+
+                System.out.println("\nPor favor, ingrese de la altura del cilindro: ");
+                int radio_cilindro = entrada.nextInt();
+
+                cilindro.imprimirDatos_cilindro();
                 break;
 
             case 5:
@@ -94,7 +107,7 @@ public class main {
                 System.out.println("\n------> Ha seleccionado el Icosaedro");
 
                 System.out.println("\nPor favor, ingrese el valor de a, correspondiente a la longitud de la arista: ");
-                //float data = entrada.nextFloat();
+                float a = entrada.nextFloat();
 
                 icosaedro.imprimir_datos_Icosaedro();
                 break;
