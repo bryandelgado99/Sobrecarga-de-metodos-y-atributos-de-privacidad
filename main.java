@@ -52,9 +52,7 @@ public class main {
                 System.out.println("\n-----> Ha seleccionado la Esfera");
                 System.out.println("\nIngrese el radio: ");
                 double rad = entrada.nextDouble();
-
                 esfera.imprimir_datos_esfera();
-
                 break;
 
             case 3:
