@@ -11,6 +11,7 @@ public class main {
         figuras3D prisma1 = new figuras3D(9.10f,11f);
         figuras3D cubo = new figuras3D(5.27f);
         figuras3D cilindro = new figuras3D(12,8,9);
+        figuras3D esfera= new figuras3D(5.6f);
 
         //Menu principal
         System.out.println("------------- Bienvenido a 3DForms --------------");
@@ -48,6 +49,12 @@ public class main {
                 break;
 
             case 2:
+                System.out.println("\n-----> Ha seleccionado la Esfera");
+                System.out.println("\nIngrese el radio: ");
+                double rad = entrada.nextDouble();
+
+                esfera.imprimir_datos_esfera();
+
                 break;
 
             case 3:
